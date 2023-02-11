@@ -18,6 +18,3 @@ set showmatch
 
 " Enable mouse support in all modes(insert,command)
 set mouse=a
-
-" Enable paste from external source
-set paste
