@@ -36,3 +36,9 @@ set cursorline
 
 " Enable spell checking
 set spell
+
+" Set vim to return to the last line you were editing
+autocmd BufReadPost * 
+	\ if line("'\"") > 0 && line("'\"") <= line("$")  |
+	\	exe "normal! g`\"" |
+	\ endif
