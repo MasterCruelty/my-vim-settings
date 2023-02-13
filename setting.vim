@@ -28,14 +28,25 @@ set nowrap
 " Enable incremental search
 set incsearch
 
-" Map F3 to the command that turn off search highlighting
-nnoremap <F3> :nohlsearch<CR>
-
 " Enable the highlight of the cursor highlighting
 set cursorline
 
 " Enable spell checking
 set spell
+
+
+" ***********Keyboard mapping****************
+
+" Map F2 to the command that turn off spell
+nnoremap <F2> :set spell!<CR>
+
+" Map F3 to the command that turn off search highlighting
+nnoremap <F3> :nohlsearch<CR>
+
+" Map F4 to the command that turn off cursorline
+nnoremap <F4> :set cursorline!<CR>
+
+" **************scripts***************
 
 " Set vim to return to the last line you were editing
 autocmd BufReadPost * 
