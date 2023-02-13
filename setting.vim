@@ -8,7 +8,7 @@ set tabstop=4
 syntax on
 
 " Enable file type detection
-filetype on
+filetype plugin indent on
 
 " Highlight search matches
 set hlsearch
@@ -19,8 +19,6 @@ set showmatch
 " Enable mouse support in all modes(insert,command)
 set mouse=a
 
-" Enable auto-indent
-set autoindent
 
 " Enable no-wrap: the lines doesn't wrap on the next line but they will extend off the right edge of the screen
 set nowrap
