@@ -10,7 +10,7 @@ set shiftwidth=4
 " Enable syntax highlighting
 syntax on
 
-" Enable file type detection
+" Enable file type detection and auto-indentation when typing new-line
 filetype plugin indent on
 
 " Highlight search matches
