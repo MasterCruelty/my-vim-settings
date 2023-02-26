@@ -31,10 +31,14 @@ set incsearch
 " Enable the highlight of the cursor highlighting
 set cursorline
 
-
 " Enable dark colorscheme
 colorscheme desert
 
+" Enable languages
+set spelllang=en_us,it_IT
+
+" Enable auto-complet
+set completeopt=menuone
 
 " ***********Keyboard mapping****************
 
