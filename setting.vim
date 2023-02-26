@@ -22,7 +22,6 @@ set showmatch
 " Enable mouse support in all modes(insert,command)
 set mouse=a
 
-
 " Enable no-wrap: the lines doesn't wrap on the next line but they will extend off the right edge of the screen
 set nowrap
 
@@ -32,8 +31,9 @@ set incsearch
 " Enable the highlight of the cursor highlighting
 set cursorline
 
-" Enable spell checking
-set spell
+
+" Enable dark colorscheme
+colorscheme desert
 
 
 " ***********Keyboard mapping****************
