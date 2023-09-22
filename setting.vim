@@ -38,7 +38,7 @@ colorscheme desert
 set spelllang=en_us,it_IT
 
 " Enable auto-complet
-set completeopt=menuone
+set completeopt=menu,noselect
 
 " ***********Keyboard mapping****************
 
@@ -54,7 +54,35 @@ nnoremap <F4> :set cursorline!<CR>
 " **************scripts***************
 
 " Set vim to return to the last line you were editing
+" ---------------------------------------
 autocmd BufReadPost * 
 	\ if line("'\"") > 0 && line("'\"") <= line("$")  |
 	\	exe "normal! g`\"" |
 	\ endif
+"----------------------------------------
+
+" Popup menu with suggestion
+"---------------------------------------
+fu! PopupMenu()
+    " Non attivare il menu se la riga è vuota
+    if match(getline(line('.')), '^\s*$') == 0
+        return ""
+    endif
+
+    " Non attivare il menu se c'è spazio 1 carattere prima del cursore
+    if getline('.')[col('.')-2] == ' '
+        return ""
+    endif
+
+    " Non attivare il menu se 1 carattere prima del cursore non c'è un carattere alfanumerico o un underscore
+    if matchstr(getline('.')[col('.')-2], '\w\|_') == ''
+        return ""
+    endif
+	
+    " Apri il menu a comparsa
+    call feedkeys("\<C-n>")
+	return ""
+endfu
+
+au TextChangedI * call PopupMenu()
+"---------------------------------------
