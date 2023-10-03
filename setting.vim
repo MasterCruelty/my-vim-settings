@@ -69,16 +69,6 @@ fu! PopupMenu()
         return ""
     endif
 
-    " Non attivare il menu se c'è spazio 1 carattere prima del cursore
-    if getline('.')[col('.')-2] == ' '
-        return ""
-    endif
-
-    " Non attivare il menu se 1 carattere prima del cursore non c'è un carattere alfanumerico o un underscore
-    if matchstr(getline('.')[col('.')-2], '\w\|_') == ''
-        return ""
-    endif
-	
     " Apri il menu a comparsa
     call feedkeys("\<C-n>")
 	return ""
