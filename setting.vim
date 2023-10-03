@@ -68,10 +68,15 @@ fu! PopupMenu()
     if match(getline(line('.')), '^\s*$') == 0
         return ""
     endif
-
-    " Apri il menu a comparsa
-    call feedkeys("\<C-n>")
-	return ""
+	
+	" Chiudi il menu a comparsa se è già aperto
+	if pumvisible()
+		return ""
+	endif
+	
+	" Apri il menu a comparsa
+	call feedkeys("\<C-n>")	
+	
 endfu
 
 au TextChangedI * call PopupMenu()
