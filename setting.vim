@@ -58,23 +58,3 @@ autocmd BufReadPost *
 	\ endif
 "----------------------------------------
 
-" Popup menu with suggestion
-"---------------------------------------
-fu! PopupMenu()
-    " Non attivare il menu se la riga è vuota
-    if match(getline(line('.')), '^\s*$') == 0
-        return ""
-    endif
-	
-	" Chiudi il menu a comparsa se è già aperto
-	if pumvisible()
-		return ""
-	endif
-	
-	" Apri il menu a comparsa
-	call feedkeys("\<C-n>")	
-	
-endfu
-
-au TextChangedI * call PopupMenu()
-"---------------------------------------
