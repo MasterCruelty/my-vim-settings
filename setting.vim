@@ -37,9 +37,6 @@ colorscheme desert
 " Enable languages
 set spelllang=en_us,it_IT
 
-" Enable auto-complet
-set completeopt=menu,noselect
-
 " ***********Keyboard mapping****************
 
 " Map F2 to the command that turn off spell
