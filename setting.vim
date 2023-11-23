@@ -2,7 +2,7 @@
 set number
 
 " Set the tab-stop equal to 4 spaces
-set tabstop=4
+set expandtab shiftwidth=4 smarttab
 
 " Set shiftwidth to 4 spaces when >> or << commands are used
 set shiftwidth=4
