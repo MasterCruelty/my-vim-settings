@@ -1,3 +1,5 @@
+" ***************Global settings**********
+
 " Enable line number
 set number
 
